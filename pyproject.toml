@@ -1,0 +1,22 @@
+[project]
+name = "developing-the-interactive-web-lec-3-hemapoojitha-ch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Hemapoojitha-ch", email = "poojitha279@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.3",
+    "gunicorn>=26.2.0",
+    "halo>=0.0.31",
+    "numpy>=2.5.3",
+]
+
+[project.scripts]
+developing-the-interactive-web-lec-3-hemapoojitha-ch = "developing_the_interactive_web_lec_3_hemapoojitha_ch:main"
+
+[build-system]
+requires = ["uv_build>=0.12.14,<0.13.0"]
+build-backend = "uv_build"

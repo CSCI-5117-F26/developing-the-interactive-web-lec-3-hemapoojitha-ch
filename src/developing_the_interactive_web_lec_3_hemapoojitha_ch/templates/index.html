@@ -1,0 +1,66 @@
+{% extends "mypage.html" %}
+
+{% block title %}
+Guestbook
+{% endblock %}
+
+{% block body %}
+
+<h1>Guestbook</h1>
+
+<form action="/add" method="POST">
+    <label for="name">Name:</label>
+    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Names</h2>
+
+{% if names %}
+
+<ul>
+    {% for name in names %}
+        <li>{{ name }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p>No names yet~</p>
+
+{% endif %}
+
+{% endblock %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+</head>
+<body>
+    <h1>Guestbook</h1>
+
+    <form action="/add" method="POST">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required> 
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Names</h2>
+
+    <ul>
+        {% for name in names %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
+
+ -->
